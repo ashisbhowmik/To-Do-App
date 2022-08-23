@@ -1,0 +1,15 @@
+.all_notes{
+    /* border: 1px solid red; */
+    margin: auto;
+    width: 60%;
+    padding: 18px;
+    /* overflow: scroll;
+    scroll-behavior: smooth; */
+
+}
+.number_of_task{
+    margin-bottom: 8px;
+    font-size: 23px;
+    font-weight: 500;
+    font-family: Gadugi;
+}

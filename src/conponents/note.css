@@ -1,0 +1,35 @@
+.note_section{
+    display: flex;
+    justify-content: space-between;
+    padding: 12px;
+}
+.note_section .btn1{
+    font-size: 12px;
+    padding: 9px;
+    border-radius: 8px;
+    outline: none;
+    border: none;
+    background-color: lightseagreen;
+    color: white;
+    cursor: pointer;
+    margin-right: 8px;
+    margin-bottom: 4px;
+}
+.note_section .btn2{
+    font-size: 12px;
+    padding: 9px;
+    border-radius: 8px;
+    outline: none;
+    border: none;
+    background-color: #ff4500;
+    color: white;
+    cursor: pointer;
+}
+.note_section .note{
+    margin-right: 9px;
+    font-family:Gadugi;
+    padding: 14px;
+    border-radius: 9px;
+    width: 70%;
+    background-color: ghostwhite;
+}

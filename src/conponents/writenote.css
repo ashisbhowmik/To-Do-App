@@ -1,0 +1,29 @@
+.write_note_section{
+    /* border: 1px solid black; */
+    width: 70%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 93px;
+    margin: auto;
+}
+.input_section{
+   margin-right:32px;
+}
+.input_section  input{
+    padding: 14px;
+    width: 590px;
+    outline: none;
+    border-radius: 12px;
+    background-color: ghostwhite;
+    border: none; 
+}
+.add_btn{
+    padding: 9px;
+     border-radius: 8px; 
+     outline: none; 
+    border: none; 
+    background-color: green;
+    color: white;
+    cursor: pointer;
+}
