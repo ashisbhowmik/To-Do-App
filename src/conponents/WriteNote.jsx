@@ -2,32 +2,20 @@ import React, { useState } from "react";
 import FaceIcon from "@mui/icons-material/Face";
 import "./writenote.css";
 import Tooltip from "@mui/material/Tooltip";
-import { auth } from "../firebase";
+import { useStateValue } from "../StateProvider";
 import db from "../firebase";
-import { useAuthState } from "react-firebase-hooks/auth";
-import { collection } from "firebase/firestore";
-
+import firebase from "firebase";
 const WriteNote = () => {
-  const [user] = useAuthState(auth);
-  const [input, setInput] = useState("");
-  const logout = () => {
-    auth.signOut();
-  };
+  const [{ user }] = useStateValue();
+  const [inputs, setInput] = useState("");
+
   const addNoteToDB = () => {
     console.log("clicked");
-    // collection(db, "users")
-    //   .doc(user.email)
-    //   .set({
-    //     name: "Los Angeles",
-    //     state: "CA",
-    //     country: "USA",
-    //   })
-    //   .then(() => {
-    //     console.log("Document successfully written!");
-    //   })
-    //   .catch((error) => {
-    //     console.error("Error writing document: ", error);
-    //   });
+    db.collection("users").doc(user.email).collection("notes").add({
+      note: inputs,
+      timestamp: firebase.firestore.FieldValue.serverTimestamp(),
+    });
+
     setInput("");
   };
   return (
@@ -36,23 +24,23 @@ const WriteNote = () => {
         <input
           type="text"
           placeholder="Write Your Task here"
-          value={input}
+          value={inputs}
           onChange={(e) => {
             setInput(e.target.value);
           }}
         />
-        <button className="add_btn" onClick={addNoteToDB} disabled={!input}>
+        <button className="add_btn" onClick={addNoteToDB} disabled={!inputs}>
           + Add Note
         </button>
       </form>
 
       <div className="login_info_section">
-        <Tooltip title={user.displayName}>
+        <Tooltip title={user?.displayName}>
           <FaceIcon className="faceIcon" />
         </Tooltip>
-        <button className="add_btn red" onClick={logout}>
+        {/* <button className="add_btn red" onClick={logout}>
           Logout
-        </button>
+        </button> */}
       </div>
     </div>
   );

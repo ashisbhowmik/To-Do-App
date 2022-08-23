@@ -1,7 +1,7 @@
 import React from "react";
 import "./note.css";
 
-const Note = ({ note_no, note_description }) => {
+const Note = ({ id, note_description }) => {
   return (
     <div className="note_section">
       <div className="note">{note_description}</div>

@@ -2,11 +2,10 @@ import React from "react";
 import AllNote from "./conponents/AllNote";
 import WriteNote from "./conponents/WriteNote";
 import Login from "./Login";
-import { useAuthState } from "react-firebase-hooks/auth";
-import { auth } from "./firebase";
+import { useStateValue } from "./StateProvider";
 
 function App() {
-  const [user] = useAuthState(auth);
+  const [{ user }] = useStateValue();
   console.log(user);
   return (
     <div className="App">
