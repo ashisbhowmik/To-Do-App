@@ -11,7 +11,7 @@ const AllNote = () => {
   useEffect(() => {
     const unsubscribe = db
       .collection("users")
-      .doc(user.email)
+      .doc(user?.email)
       .collection("notes")
       .onSnapshot((snapshot) =>
         setNotes(
@@ -30,10 +30,20 @@ const AllNote = () => {
 
   return (
     <div className="all_notes">
-      <div className="number_of_task">Task({notes.length})</div>
-      {notes.map((_note) => (
-        <Note key={_note.id} id={_note.id} note_description={_note.data.note} />
-      ))}
+      {notes.length == 0 ? (
+        <h2 style={{ fontWeight: 600 }}>No Data to show</h2>
+      ) : (
+        <>
+          <div className="number_of_task">Task({notes.length})</div>
+          {notes.map((_note) => (
+            <Note
+              key={_note.id}
+              id={_note.id}
+              note_description={_note.data.note}
+            />
+          ))}
+        </>
+      )}
     </div>
   );
 };
