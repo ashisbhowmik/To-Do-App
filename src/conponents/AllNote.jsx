@@ -9,23 +9,6 @@ const AllNote = () => {
       <Note note_no={1} note_description={"Go to Market To Buy some Fruit"} />
       <Note note_no={2} note_description={"Go to Market To Buy some Fruit"} />
       <Note note_no={3} note_description={"Go to Market To Buy some Fruit"} />
-      <Note note_no={4} note_description={"Go to Market To Buy some Fruit"} />
-      <Note note_no={4} note_description={"Go to Market To Buy some Fruit"} />
-      <Note note_no={4} note_description={"Go to Market To Buy some Fruit"} />
-      <Note note_no={4} note_description={"Go to Market To Buy some Fruit"} />
-      <Note note_no={4} note_description={"Go to Market To Buy some Fruit"} />
-      <Note note_no={4} note_description={"Go to Market To Buy some Fruit"} />
-      <Note note_no={4} note_description={"Go to Market To Buy some Fruit"} />
-      <Note note_no={4} note_description={"Go to Market To Buy some Fruit"} />
-      <Note note_no={4} note_description={"Go to Market To Buy some Fruit"} />
-      <Note note_no={4} note_description={"Go to Market To Buy some Fruit"} />
-      <Note note_no={4} note_description={"Go to Market To Buy some Fruit"} />
-      <Note note_no={4} note_description={"Go to Market To Buy some Fruit"} />
-      <Note note_no={4} note_description={"Go to Market To Buy some Fruit"} />
-      <Note note_no={4} note_description={"Go to Market To Buy some Fruit"} />
-      <Note note_no={4} note_description={"Go to Market To Buy some Fruit"} />
-      <Note note_no={4} note_description={"Go to Market To Buy some Fruit"} />
-      <Note note_no={4} note_description={"Go to Market To Buy some Fruit"} />
     </div>
   );
 };

@@ -1,0 +1,10 @@
+.login-div{
+    display: flex;
+    justify-content: center;
+}
+.innner_login_div{
+    padding: 120px;
+    background-color: ghostwhite;
+    justify-content: center;
+    margin-top: 170px;
+}
