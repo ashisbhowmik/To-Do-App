@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import "./note.css";
 import db from "../firebase";
 import { useStateValue } from "../StateProvider";
